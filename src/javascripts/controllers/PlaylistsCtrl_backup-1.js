@@ -6,19 +6,23 @@ angular.module('mhApp')
     const playlists = this;
     const user = firebase.auth().currentUser;
     const uid = user.uid;
-    $scope.playlistArray = [];
     playlists.createNewPlaylist = function(name) {
       var pushPlaylist = playlists.name;
       firebase.database().ref('users/' + uid + '/playlists').push(pushPlaylist);
     };
-    playlists.removePlaylist = function(index) {
-      $scope.playlistArray.splice(index, 1);
-      console.log($scope.playlistArray);
-    };
     playlists.updatePlaylist = (function() {
+      var pushPlaylist = playlists.name;
       var dbRef = firebase.database().ref('users/' + uid).child('playlists');
       dbRef.on('child_added', function(snap) {
-        $scope.playlistArray.push(snap.val());
+        var playlistData = document.getElementById('playlist-data');
+        var tr = document.createElement('tr');
+        var td = document.createElement('td');
+        td.innerHTML = snap.val();
+        var delbtn = document.createElement('button');
+        delbtn.innerHTML = 'X';
+        tr.appendChild(td);
+        tr.appendChild(delbtn);
+        playlistData.appendChild(tr);
       });
       return user;
     })();

@@ -1,2 +1,4 @@
 node_modules/
 bower_components/
+src\javascripts\controllers\PlaylistsCtrl_backup-1.js
+src\partials\Playlists_backup-1.html
