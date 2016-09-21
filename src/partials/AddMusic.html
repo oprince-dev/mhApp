@@ -1,0 +1,22 @@
+<div class="navbar navbar-inverse navbar-static-top">
+  <div class="container-fluid">
+    <div class="col-xs-2" id="logo">
+      <a href="#/">{{add.Logo}}</a>
+    </div>
+    <div class="col-xs-offset-8 col-xs-2 navlinks">
+      <a href="#/viewmusic">{{add.ViewMusic}}</a>
+      <a href="#/addmusic">{{add.AddMusic}}</a>
+    </div>
+  </div>
+</div>
+<div id="addContent">
+  <h2>Add Song</h2>
+  <div id="addInput">
+      <h4>Title</h4>
+      <input class="form-control" id="songTitleInput" type="text" ng-model="songs.artist">
+      <h4>Artist</h4>
+      <input class="form-control" id="songArtistInput" type="text" ng-model="songs.title">
+      <button class="btn btn-info" ng-click="addToSongs()">Submit</button>
+      {{songsToAdd}}
+  </div>
+</div>

@@ -1,0 +1,5 @@
+{
+  "predef": [ "window", "angular", "firebase", "document", "console" ],
+  "esversion": 6,
+  "globalstrict": true
+}
