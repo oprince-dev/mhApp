@@ -9,7 +9,6 @@
   "author": "Oliver Prince <oprince.dev@gmail.com>",
   "license": "ISC",
   "devDependencies": {
-    "bower": "^1.7.9",
     "gulp": "^3.9.1",
     "gulp-jshint": "^2.0.1",
     "gulp-watch": "^4.3.6",
